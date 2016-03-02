@@ -1,0 +1,109 @@
+<div id="page">
+
+<div class="header mm-fixed-top topnavbar">
+    <!--<img src={{logo}} class="togglebutton">-->
+
+    <p class="userbutton ">
+
+    <div class="dropdown"><span class="usernametext" id="dropdownMenu1" data-toggle="dropdown" style="color: #0088cc;">{{userName}} |
+    <span style="color: #000000; margin-right: 10px;" ng-click="logOut()"> Logout</span></span>
+
+
+    </div>
+
+
+</div>
+
+<div class="header mm-fixed-top bredcombar">
+
+
+
+</div>
+
+
+<div class="header mm-fixed-top searchbarfordetailview">
+    <div class="searicon" id="button" style="color: #000000; font-size: 30px;margin-top: 0px;"
+         data-tool="just hangin'">
+    </div>
+</div>
+
+
+<!--THE ADVANCED LOOKUP HTML-->
+
+
+<!--END OF THE LOOKUP-->
+
+<div class="wrapperDiv" id="wrapperDevice">
+
+    <div class="content" ng-style="{'height':myHeight}">
+        <div class="row" ng-style="{'height' : rowHeight}">
+
+        </div>
+        <div class="row">
+            <div ng-class="changeClassForDiv()"></div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2">
+                <div class="row">
+                    <a href={{baseURL+"monitor/"}} target="_blank">
+                        <img src="image/icon_monitor.png" class="thumbIcons" />
+                    </a>
+                </div>
+                <div class="row" style="font-size: 15px; margin-top: 15px; font-weight: bold;">
+                    <a href="http://mx4/monitor/" target="_blank">Monitor</a>
+                </div>
+            </div>
+
+
+            <div class="col-lg-2 col-md-2 col-sm-2" ng-show="manageEnable">
+                <div class="row">
+                    <a href={{baseURL+"manage/"}} target="_blank">
+            <img src="image/icon_manage.png" class="thumbIcons"/>
+                        </a>
+                    </div>
+                <div class="row" style="font-size: 15px; margin-top: 15px; font-weight: bold;">
+                    Manage
+                </div>
+                </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2" ng-show="analyticsEnable">
+                <div class="row">
+                    <a href={{baseURL+"analytics/"}} target="_blank">
+                        <img src="image/icon_analytics.png" class="thumbIcons"/>
+                    </a>
+                </div>
+                <div class="row" style="font-size: 15px; margin-top: 15px; font-weight: bold;">
+                    Analytics
+                </div>
+            </div>
+
+
+
+
+
+            <div ng-class="changeClassForDiv()"></div>
+
+            <div class="row" style="height: 130px; background-color: #EEEEEE; margin-top: 120px;"></div>
+        </div>
+
+        <div  style="position: absolute;  right: 50px;  bottom: 20px;">
+            <img src="image/matrixLogo.png" width="300px;"/>
+            </div>
+
+
+
+
+        <div class="alert loderbar" role="alert" ng-show="loaderStatus" close="loaderStatus=false">
+                <span id="loader"> <p class="errormessage"><img src={{lodingImage}}
+                                                                style="width: 25px; height: 25px; margin-right: 10px;"><span
+                        style="color: #000000 !important;">{{userErorInfo}}</span>
+                </p></span>
+
+        </div>
+
+
+    </div>
+
+</div>
+</div>
+
+
