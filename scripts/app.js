@@ -9,14 +9,13 @@ var matrixApp = angular.module('matrixApp', [
     'ngRoute',
     'mainControllers',
     'mainServices',
+    'imageUploaderControllers',
+    'imageUploadServices',
     'ngCookies',
     'util',
     'ui.bootstrap',
     'userFeaturesControllers',
     'userFeaturesServices'
-
-
-
 ]);
 matrixApp.config(['$routeProvider',
     function ($routeProvider) {
@@ -25,12 +24,12 @@ matrixApp.config(['$routeProvider',
                 templateUrl: 'scripts/main/view/main.html',
                 controller: 'mainCtrl'
             }).
-            when('/features/', {
-                templateUrl: 'scripts/userFeatures/view/userFeatures.html',
-                controller: 'userFeaturesCtrl'
+            when('/uploadimages/', {
+                templateUrl: 'scripts/imageUpload/view/imageUpload.html',
+                controller: 'imageUploadCtrl'
             }).
             otherwise({
-                redirectTo: '/login'
+                redirectTo: '/'
             });
 
     }]);

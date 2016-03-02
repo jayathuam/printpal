@@ -53,7 +53,12 @@ loginControllers.controller('mainCtrl',
         // End of use strict
 
         $scope.height = $window.innerHeight;
+        $scope.changeView = function(view){
+            $location.path(view);
+        };
         $('.header').height($scope.height - 200);
+
+
 
 });
 /**
