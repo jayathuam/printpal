@@ -7,10 +7,12 @@
 
 var matrixApp = angular.module('matrixApp', [
     'ngRoute',
+    'ui.router',
     'mainControllers',
     'mainServices',
     'imageUploaderControllers',
     'imageUploadServices',
+    'imageUploadUtils',
     'ngCookies',
     'util',
     'ui.bootstrap',
@@ -62,7 +64,7 @@ matrixApp.directive('ngThumb', ['$window', function($window) {
         }
     };
 }]);
-matrixApp.config(['$routeProvider',
+/*matrixApp.config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider.
             when('/', {
@@ -77,4 +79,28 @@ matrixApp.config(['$routeProvider',
                 redirectTo: '/'
             });
 
-    }]);
+    }]);*/
+matrixApp.config(function($stateProvider, $urlRouterProvider) {
+    $stateProvider
+        .state('landing', {
+            url: "/",
+            templateUrl: "scripts/main/view/main.html",
+            controller: 'mainCtrl'
+        })
+        .state('uploadImage', {
+            url: "/uploadimages/",
+            templateUrl: "scripts/imageUpload/view/imageUpload.html",
+            controller: 'imageUploadCtrl'
+        })
+        .state('uploadImage.details', {
+            url: '/details',
+            templateUrl: 'scripts/imageUpload/view/clientInfo.html'
+        })
+        .state('uploadImage.verification', {
+            url: '/verification',
+            templateUrl: 'scripts/imageUpload/view/clientVerification.html'
+        });
+
+
+    $urlRouterProvider.otherwise("/");
+});
