@@ -117,4 +117,13 @@ imageUploaderControllers.controller('imageUploadCtrl', function ($scope, $rootSc
     };
     imageUploadService.getStatus($scope);
 
+    $scope.textBoxAddressCount = 1;
+    var firstAddress = {"id":$scope.textBoxAddressCount,"address":""};
+    $scope.addAddressTextBox = function (){
+
+    };
+    $scope.removeAddressTextBox = function(){
+
+    };
+
 });

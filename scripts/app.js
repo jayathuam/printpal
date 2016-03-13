@@ -18,7 +18,8 @@ var matrixApp = angular.module('matrixApp', [
     'ui.bootstrap',
     'userFeaturesControllers',
     'userFeaturesServices',
-    'angularFileUpload'
+    'angularFileUpload',
+    'ngAnimate'
 ]);
 matrixApp.directive('ngThumb', ['$window', function($window) {
     var helper = {
@@ -88,9 +89,13 @@ matrixApp.config(function($stateProvider, $urlRouterProvider) {
             controller: 'mainCtrl'
         })
         .state('uploadImage', {
-            url: "/uploadimages/",
-            templateUrl: "scripts/imageUpload/view/imageUpload.html",
+            url: "/uploadimages",
+            templateUrl: "scripts/imageUpload/view/uploader.html",
             controller: 'imageUploadCtrl'
+        })
+        .state('uploadImage.upload', {
+            url: '/upload',
+            templateUrl: 'scripts/imageUpload/view/imageUpload.html'
         })
         .state('uploadImage.details', {
             url: '/details',

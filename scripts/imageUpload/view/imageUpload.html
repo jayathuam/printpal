@@ -1,8 +1,9 @@
-<div class="container">
 
-    <div class="row">
+<!--<div class="container">-->
 
-        <div class="col-lg-3 col-md-3">
+    <!--<div class="row">-->
+
+        <!--<div class="col-lg-3 col-md-3">
 
             <h3>Price Details</h3>
             <table>
@@ -47,18 +48,13 @@
                 </button>
             </div>
 
-        </div>
+        </div>-->
 
-        <div class="col-lg-9 col-md-9" style="margin-bottom: 40px">
-            <div id="status-buttons" class="text-center">
-                <a ui-sref-active="active" ui-sref=".details"><span>1</span> Profile</a>
-                <a ui-sref-active="active" ui-sref=".details"><span>2</span> Interests</a>
-                <a ui-sref-active="active" ui-sref=".verification"><span>3</span> Payment</a>
-            </div>
+        <div class="col-lg-12 col-md-12" style="margin-bottom: 40px">
             <h2>Upload images</h2>
             <div ng-show="uploader.isHTML5">
 
-                <!-- Example: nv-file-drop="" uploader="{Object}" options="{Object}" filters="{String}" -->
+                <!--Example: nv-file-drop="" uploader="{Object}" options="{Object}" filters="{String}" -->
                 <div nv-file-drop="" uploader="uploader" options="{ url: '/foo' }">
                     <div nv-file-over="" uploader="uploader" over-class="another-file-over-class"
                          class="well my-drop-zone">
@@ -67,9 +63,10 @@
                 </div>
             </div>
 
-            <!-- Example: nv-file-select="" uploader="{Object}" options="{Object}" filters="{String}" -->
+           <!-- Example: nv-file-select="" uploader="{Object}" options="{Object}" filters="{String}" -->
             <input type="file" nv-file-select="" uploader="uploader" multiple/><br/>
             <p>Uploaded photos: {{ uploader.queue.length }}</p>
+
 
             <!--<table class="table">
                 <thead>
@@ -159,8 +156,9 @@
              </div>-->
 
 
-        </div>
+     </div>
 
-    </div>
+   <!-- </div>-->
 
-</div>
+<!--
+</div>-->
