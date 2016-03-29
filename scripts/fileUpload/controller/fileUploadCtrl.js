@@ -1,9 +1,9 @@
 /**
  * Created by JayathuA on 7/9/2014.
  */
-var imageUploaderControllers = angular.module('imageUploaderControllers', []);
+var fileUploaderControllers = angular.module('fileUploaderControllers', []);
 
-imageUploaderControllers.controller('imageUploadCtrl', function ($scope, $rootScope, $window, $routeParams, $cookieStore, imageUploadService, $filter, $location,FileUploader,imageUploadUtil,uuid2) {
+fileUploaderControllers.controller('fileUploadCtrl', function ($scope, $rootScope, $window, $routeParams, $cookieStore, imageUploadService, $filter, $location,FileUploader,imageUploadUtil,uuid2) {
     //var csrf_token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
     var uploader = $scope.uploader = new FileUploader({
         url: 'http://10.101.9.23:9800/api/files',
@@ -19,7 +19,7 @@ imageUploaderControllers.controller('imageUploadCtrl', function ($scope, $rootSc
         name: 'imageFilter',
         fn: function(item /*{File|FileLikeObject}*/, options) {
             var type = '|' + item.type.slice(item.type.lastIndexOf('/') + 1) + '|';
-            return '|jpg|png|jpeg|bmp|gif|'.indexOf(type) !== -1;
+            return '|pdf|docx|doc|'.indexOf(type) !== -1;
         }
     });
 
@@ -152,7 +152,7 @@ imageUploaderControllers.controller('imageUploadCtrl', function ($scope, $rootSc
         email: "",
         address: [{"id":uuid2.newuuid(),"address":""}],
         conno: ""
-    }
+    };
     $scope.addAddressTextBox = function (){
         $scope.formData.address.push({"id":uuid2.newuuid(),"address":""});
     };

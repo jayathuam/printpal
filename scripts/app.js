@@ -13,13 +13,17 @@ var matrixApp = angular.module('matrixApp', [
     'imageUploaderControllers',
     'imageUploadServices',
     'imageUploadUtils',
+    'fileUploaderControllers',
+    'fileUploadServices',
+    'fileUploadUtils',
     'ngCookies',
     'util',
     'ui.bootstrap',
     'userFeaturesControllers',
     'userFeaturesServices',
     'angularFileUpload',
-    'ngAnimate'
+    'ngAnimate',
+    'angularUUID2'
 ]);
 matrixApp.directive('ngThumb', ['$window', function($window) {
     var helper = {
@@ -104,6 +108,23 @@ matrixApp.config(function($stateProvider, $urlRouterProvider) {
         .state('uploadImage.verification', {
             url: '/verification',
             templateUrl: 'scripts/imageUpload/view/clientVerification.html'
+        })
+        .state('uploadFile', {
+            url: "/uploadfiles",
+            templateUrl: "scripts/fileUpload/view/uploader.html",
+            controller: 'fileUploadCtrl'
+        })
+        .state('uploadFile.upload', {
+            url: '/upload',
+            templateUrl: 'scripts/fileUpload/view/fileUpload.html'
+        })
+        .state('uploadFile.details', {
+            url: '/details',
+            templateUrl: 'scripts/fileUpload/view/clientInfo.html'
+        })
+        .state('uploadFile.verification', {
+            url: '/verification',
+            templateUrl: 'scripts/fileUpload/view/clientVerification.html'
         });
 
 
