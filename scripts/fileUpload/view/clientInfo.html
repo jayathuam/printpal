@@ -1,44 +1,50 @@
-<div class="form-group">
-    <div class="col-lg-2">
-    <label style="width: 100px;">Name</label>
-        </div>
-    <div class="col-lg-10">
-    <input style="width: 80%; margin-bottom: 10px;" type="text" class="" ng-model="formData.name">
+<div class="pp-step-wrapper animated fadeIn pp-info-container">
+    <div class="step-heading">
+        <h1><span>Step 2.</span> Information</h1>
+        <p>Enter your personal information here</p>
     </div>
-</div>
+    <div class="form-group">
+        <div class="col-lg-2">
+        <label style="width: 100px;">Name</label>
+            </div>
+        <div class="col-lg-10">
+        <input style="width: 80%; margin-bottom: 10px;" type="text" class="form-control" ng-model="formData.name">
+        </div>
+    </div>
 
-<div class="form-group">
-    <div class="col-lg-2">
-    <label style="width: 100px;">Email</label>
-        </div>
-    <div class="col-lg-10">
-    <input style="width: 80%; margin-bottom: 10px;" type="text" class="" ng-model="formData.email">
-        </div>
-</div>
+    <div class="form-group">
+        <div class="col-lg-2">
+        <label style="width: 100px;">Email</label>
+            </div>
+        <div class="col-lg-10">
+        <input style="width: 80%; margin-bottom: 10px;" type="text" class="form-control" ng-model="formData.email">
+            </div>
+    </div>
 
-<div class="form-group">
-    <div class="col-lg-2">
-    <label style="width: 100px;">Address</label>
-        </div>
-    <div class="col-lg-10">
-        <div ng-repeat="item in formData.address">
-    <textarea style="width: 80%; margin-bottom: 10px;" type="" class=""ng-model="item.address"></textarea>
-        <i class="fa fa-minus errorRed" ng-click="removeAddressTextBox(item)"></i></span>
-        </div>
-        <i class="fa fa-plus successGreen" ng-click="addAddressTextBox()"></i></span>
-        </div>
+    <div class="form-group">
+        <div class="col-lg-2">
+        <label style="width: 100px;">Address</label>
+            </div>
+        <div class="col-lg-10">
+            <div ng-repeat="item in formData.address">
+                <textarea style="width: 80%; margin-bottom: 10px;" type="" class="form-control" ng-model="item.address"></textarea>
+                <div class="address-config remove-field" tooltip="Remove Address">
+                    <i class="fa fa-minus" ng-click="removeAddressTextBox(item)"></i>
+                </div>
+            </div>
+            <div class="address-config add-field" tooltip="Add Address">
+            <i class="fa fa-plus successGreen" ng-click="addAddressTextBox()"></i></span>
+            </div>
+    </div>
 
-</div>
-
-
-
-<div class="form-group">
-    <div class="col-lg-2">
-    <label style="width: 100px;">Contact No</label>
-        </div>
-    <div class="col-lg-10">
-    <input style="width: 80%; margin-bottom: 10px;" type="text" class="" ng-model="formData.conno">
-        </div>
+    <div class="form-group">
+        <div class="col-lg-2">
+        <label style="width: 100px;">Contact No</label>
+            </div>
+        <div class="col-lg-10">
+        <input style="width: 80%; margin-bottom: 10px;" type="text" class="form-control" ng-model="formData.conno">
+            </div>
+    </div>
 </div>
 
 <!--

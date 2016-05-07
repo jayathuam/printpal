@@ -50,22 +50,40 @@
 
         </div>-->
 
-        <div class="col-lg-12 col-md-12" style="margin-bottom: 40px">
-            <h2>Upload images</h2>
-            <div ng-show="uploader.isHTML5">
+        <div class="col-lg-12 col-md-12 pp-step-wrapper pp-image-upload-container animated fadeIn file-upload-container">
+            <div class="step-heading">
+                <h1><span>Step 1.</span> Upload Documents</h1>
+                <p>Upload your documents here</p>
+            </div>
+
+            <div ng-show="uploader.isHTML5" class="image-uploader">
 
                 <!--Example: nv-file-drop="" uploader="{Object}" options="{Object}" filters="{String}" -->
                 <div nv-file-drop="" uploader="uploader" options="{ url: '/foo' }">
-                    <div nv-file-over="" uploader="uploader" over-class="another-file-over-class"
-                         class="well my-drop-zone">
-                        drop your images....
+                    <div nv-file-over="" uploader="uploader" over-class="another-file-over-class" class="well my-drop-zone">
+                        <div class="flaticon-pp-image-upload2 upload-icon animated bounce file-upload-icon"></div>
+                        <b>Drag & Drop</b>
+                        <p>to upload</p>
+                        <div>
+                            <input type="file" class="hidden" id="uploadFile" nv-file-select="" uploader="uploader" multiple/>
+                            <div class="browse-button" id="uploadTrigger">OR, Browse</div>
+                        </div>
                     </div>
                 </div>
             </div>
 
+
+            <!--SCRIPT - Customize browse button-->
+            <script type="text/javascript">
+                $("#uploadTrigger").click(function(){
+                    $("#uploadFile").click();
+                });
+            </script>
+
+
            <!-- Example: nv-file-select="" uploader="{Object}" options="{Object}" filters="{String}" -->
-            <input type="file" nv-file-select="" uploader="uploader" multiple/><br/>
-            <p>Uploaded photos: {{ uploader.queue.length }}</p>
+            <!--<input type="file" nv-file-select="" uploader="uploader" multiple/><br/>-->
+            <p class="uploaded-count">Uploaded photos: {{ uploader.queue.length }}</p>
 
 
             <!--<table class="table">
@@ -116,24 +134,22 @@
                 </tr>
                 </tbody>
             </table>-->
-            <div class="col-lg-12 col-md-12">
-                <div class="col-md-4" style="margin-bottom: 25px;" ng-repeat="item in uploader.queue">
-                    <div ng-show="uploader.isHTML5" ng-thumb="{ file: item._file, height: 100 }"></div>
-                    <h4 style="text-overflow: ellipsis ;white-space: nowrap; width: 130px; overflow: hidden;margin-bottom: 5px !important; font-weight: 700;">
-                        {{ item.file.name }}
-                    </h4>
-                    <span style="margin-bottom: 0px !important;font-size: 10px;">{{ item.file.size/1024/1024|number:2 }} MB</span>
-                    <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()"
-                            style="background-color: rgba(0,0,0,0);">
-                        <span class="glyphicon glyphicon-trash" style="color: #d9534f"></span>
+            <div class="col-lg-12 col-md-12 uploaded-images-container" ng-if="uploader.queue.length != 0">
+                <div class="col-md-3 uploaded-image-wrapper" ng-repeat="item in uploader.queue">
+                    <button type="button" class="btn btn-danger btn-xs delete-uploaded-image pull-right animated fadeIn" ng-click="item.remove()">
+                        <span class="flaticon-pp-delete" tooltip="Remove Document"></span>
                     </button>
-                    <br/>
-                    <label>size</label> <select style="width: 60px;" ng-model="item.sizeDefault"
+                    <div class="clearfix"></div>
+                    <div class="uploaded-image" ng-show="uploader.isHTML5" ng-thumb="{ file: item._file, height: 100 }"></div>
+                    <h4 title="{{ item.file.name }}">{{ item.file.name }}</h4>
+                    <span class="pull-left">{{ item.file.size/1024/1024|number:2 }} MB</span>
+
+                    <label class="pull-left">Size:</label> <select ng-model="item.sizeDefault"
                                                 ng-options="f for f in item.sizeInfo" ng-change="item.onSelectChnage(item.file.name,item.sizeDefault)"></select><br/>
-                    <label>No of copies<input type="number" min="1" ng-model="item.noCount" ng-change="photoNumberValidator(item)" required/></label>
-                    <span ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok successGreen"></i></span>
-                    <span ng-show="item.isCancel"><i class="glyphicon glyphicon-ban-circle errorRed"></i></span>
-                    <span ng-show="item.isError"><i class="glyphicon glyphicon-remove errorRed"></i></span>
+                    <label>No of copies:<input class="copies-input form-control" type="number" min="1" ng-model="item.noCount" ng-change="photoNumberValidator(item)" required/></label>
+                    <span class="alert alert-success" ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok successGreen"></i>Successfully Uploaded.</span>
+                    <span class="alert alert-warning" ng-show="item.isCancel"><i class="glyphicon glyphicon-ban-circle errorRed"></i>Upload Cancelled!</span>
+                    <span class="alert alert-danger" ng-show="item.isError"><i class="glyphicon glyphicon-remove errorRed"></i>Error! Try again.</span>
                 </div>
             </div>
 

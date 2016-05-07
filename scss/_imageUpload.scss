@@ -1,0 +1,404 @@
+/*ADDED BY ARUNIW*/
+
+/*IMAGE UPLOAD PAGE CSS*/
+
+@import "_variables";
+@import "_mixins";
+
+/*COMMON*/
+select{
+  @include border-radius(4px);
+  border: 1px solid $pp-theme-light-grey;
+  background-color: #ffffff;
+  color: $pp-theme-grey;
+  display: inline-block;
+  padding: 6px 20px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  &:disabled{
+    cursor: not-allowed;
+  }
+}
+
+.image-upload-container{
+  padding: 65px 15px;
+}
+
+.tabs {
+  font-size: 1em;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  nav {
+    text-align: center;
+    ul {
+      @include flexbox();
+      margin: 0 auto;
+      position: relative;
+      list-style: none;
+      li {
+        @include flex(1);
+        display: block;
+        margin: 0;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        a {
+          color: $pp-theme-light-grey;
+          display: block;
+          line-height: 2.5;
+          text-decoration: none !important;
+          text-overflow: ellipsis;
+          position: relative;
+          overflow: hidden;
+          white-space: nowrap;
+          &.active{
+            color: $pp-theme-green;
+
+          }
+          &:focus {
+            outline: none;
+          }
+          span {
+            display: block;
+            font-family: $sans-serif-font;
+            margin: -35px auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*TABS CIRCLES*/
+
+.tabs-style-circle {
+  nav {
+    li {
+      a{
+        @include border-radius(50%);
+        border: 2px solid $pp-theme-light-grey;
+        content: '';
+        top: 50%;
+        left: 50%;
+        margin: 0 -50px;
+        height: 120px;
+        opacity: 1;
+        width: 120px;
+        -webkit-transform: translate3d(0,-4px,0);
+        transform: translate3d(0,-4px,0);
+        &.icon{
+          &:before{
+            font-size: 42px !important;
+            margin-left: 0 !important;
+          }
+        }
+        &.active{
+          border: 2px solid $pp-theme-green;
+        }
+      }
+      &:after{
+        content: '';
+        width: 212px;
+        height: 2px;
+        background: $pp-theme-light-grey;
+        position: absolute;
+        top: 50%;
+        left: 75%;
+        z-index: -1;
+      }
+      &:last-child{
+        &:after{
+          background: #f0f0f0 !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 58em) {
+  .tabs nav a.icon span {
+    display: none;
+  }
+  .tabs nav a:before {
+    margin-right: 0;
+  }
+  .tabs-style-circle nav li::before {
+    margin: -40px 0 0 -40px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/*STEP WRAPPER*/
+.pp-step-wrapper {
+  margin-bottom: 45px;
+  padding: 30px;
+  .step-heading{
+    color: $pp-theme-grey;
+    font-family: $serif-font;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 35px;
+    text-align: center;
+    span{
+      font-weight: 300 !important;
+      opacity: 0.7;
+    }
+    p{
+      font-family: $sans-serif-font;
+      font-size: 17px !important;
+      margin-top: 5px;
+      opacity: 0.5;
+    }
+  }
+}
+
+/*Image Uploader - Drag & Drop*/
+.image-uploader{
+  text-align: center;
+  .well{
+    @include border-radius(10px);
+    border: 2px dashed $pp-theme-light-grey;
+    color: $theme-primary;
+    font-family: $sans-serif-font;
+    text-transform: uppercase;
+    b{
+      font-size: 24px;
+      font-weight: 700;
+      opacity: 0.8;
+      letter-spacing: 1px;
+    }
+    p{
+      font-size: 18px;
+      font-weight: 500;
+      opacity: 0.7;
+    }
+  }
+  .upload-icon{
+    &:before{
+      color: $theme-primary;
+      font-size: 100px;
+      margin-left: 0 !important;
+    }
+  }
+  .browse-button{
+    @include background-opacity($theme-primary,0.8);
+    color: #ffffff;
+    cursor: pointer;
+    letter-spacing: 1px;
+    padding: 12px;
+    margin: 5px auto;
+    width: 170px;
+  }
+}
+
+.uploaded-count{
+  background-color: #f0f0f0;
+  display: inline-block;
+  font-family: $sans-serif-font;
+  font-size: 18px;
+  left: 50%;
+  margin-left: -85px;
+  padding: 0 10px;
+  position: absolute;
+  text-align: center;
+  z-index: 10;
+}
+
+.global-config-wrapper{
+  @include border-radius(5px);
+  background-color: $pp-theme-white;
+  font-family: $sans-serif-font;
+  margin: -40px 12px;
+  padding: 20px;
+  h1{
+    border-bottom: 1px solid $pp-theme-light-grey;
+    color: $pp-theme-grey;
+    font-size: 30px;
+    font-weight: 300;
+    padding-bottom: 15px;
+    opacity: 0.8;
+  }
+  .settings-icon{
+    &:before{
+      font-size: 27px;
+      margin-left: 0 !important;
+    }
+  }
+  .queue-progressbar{
+    margin-top: 15px;
+  }
+  .size-container{
+    label{
+      font-family: $sans-serif-font;
+      font-size: 16px;
+    }
+  }
+  .options-btn-container{
+    .btn-s{
+      @include border-radius(5px);
+    }
+  }
+}
+
+.price-table-container{
+  margin-top: 15px;
+  font-family: $sans-serif-font;
+  table{
+    table-layout: fixed;
+    border-collapse: collapse;
+    tr{
+      display: table-row;
+      th,td{
+        padding: 8px;
+        line-height: 1.5;
+        text-align: center;
+        text-transform: uppercase;
+        min-width: 110px;
+        max-width: 160px;
+        &:first-child{
+          text-align: left !important;
+        }
+      }
+      &:last-child{
+        @include background-opacity($pp-theme-green,0.8);
+        color: $pp-theme-white;
+        background-color: $pp-theme-green !important;
+        font-weight: 900;
+        td{
+          text-align: center !important;
+        }
+      }
+      td{
+        h4{
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+    tbody {
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      height: 200px;
+      width: 100%;
+      tr:nth-child(even) {
+        background-color: $pp-theme-dark-grey;
+      }
+    }
+  }
+  .overflow-container{
+    max-height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+/*UPLOADED IMAGES CONTAINER*/
+
+.uploaded-images-container{
+  @include border-radius(10px);
+  border: 2px solid $pp-theme-green;
+  margin: 8px 0 40px 0;
+  padding: 20px 8px;
+  .uploaded-image-wrapper{
+    @include box-shadow(0px 0px 10px 0px rgba(0,0,0,0.65));
+    @include  border-radius(10px);
+    @include background-opacity($pp-theme-card-bg, 0.9);
+    padding: 12px;
+    margin: 10px;
+    max-width: 230px;
+    .uploaded-image{
+      canvas{
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    h4{
+      font-weight: 700;
+      line-height: 1.5;
+      text-overflow: ellipsis;
+      margin: 5px 0!important;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    span{
+      font-family: $serif-font;
+      font-size: 15px;
+    }
+    label {
+      color: $pp-theme-grey;
+    }
+    label, select{
+      clear: both;
+      margin: 20px 0 -5px;
+    }
+    .copies-input{
+      margin: 15px 0;
+    }
+    .alert{
+      font-family: $serif-font;
+      font-size: 14px;
+      padding: 5px;
+      i{
+        margin-right: 5px;
+      }
+    }
+    .delete-uploaded-image{
+      background-color: transparent !important;
+      span{
+        color: $pp-theme-error-red;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 5px;
+        &:before{
+          font-size: 23px;
+          margin-left: 0!important;
+        }
+      }
+      .copies-input{
+        margin: 10px 0;
+      }
+    }
+  }
+}
+.pp-info-container{
+  margin-bottom: 70px;
+  textarea{
+    resize: vertical;
+  }
+}
+
+.address-config{
+  @include border-radius(50%);
+  color: #ffffff;
+  cursor: pointer;
+  height: 27px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  margin-right: 145px;
+  width: 27px;
+  &.remove-field{
+    background-color: $pp-theme-error-red;
+  }
+  &.add-field{
+    background-color: $pp-theme-green;
+    margin-top: 30px;
+  }
+  i{
+    padding: 5.5px;
+  }
+}
+.errorRed{
+  color: $pp-theme-error-red;
+}

@@ -1,0 +1,1229 @@
+/*ADDED BY ARUNIW*/
+/*IMPORT SCSS FILES HERE*/
+/* line 17, C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*ADDED BY ARUNIW*/
+/*SASS MIXINS*/
+/*ADDED BY ARUNIW*/
+/*VARIABLES - Colors, Fonts*/
+/*Colors-Moutains Theme*/
+/*Colors-Nature Theme*/
+/*Fonts*/
+/*ADDED BY ARUNIW*/
+/*HOME PAGE CSS*/
+/*ADDED BY ARUNIW*/
+/*VARIABLES - Colors, Fonts*/
+/*Colors-Moutains Theme*/
+/*Colors-Nature Theme*/
+/*Fonts*/
+/*ADDED BY ARUNIW*/
+/*SASS MIXINS*/
+/*
+* Global Components
+*/
+/* line 12, ../scss/_creative.scss */
+html,
+body {
+  background-color: #f0f0f0;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 18, ../scss/_creative.scss */
+body {
+  font-family: "Merriweather", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* line 22, ../scss/_creative.scss */
+hr {
+  border-width: 3px;
+  border-color: #2ed8b1;
+  max-width: 50px;
+}
+
+/* line 28, ../scss/_creative.scss */
+hr.light {
+  border-color: white;
+}
+
+/* line 36, ../scss/_creative.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* line 40, ../scss/_creative.scss */
+a {
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
+  -ms-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  color: #2ed8b1;
+}
+/* line 44, ../scss/_creative.scss */
+a:hover, a:focus {
+  color: #21b291;
+}
+
+/* line 49, ../scss/_creative.scss */
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* line 55, ../scss/_creative.scss */
+.bg-primary {
+  background-color: #2ed8b1;
+}
+
+/* line 59, ../scss/_creative.scss */
+.bg-dark {
+  background-color: #222222;
+  color: white;
+}
+
+/* line 64, ../scss/_creative.scss */
+.text-faded {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* line 68, ../scss/_creative.scss */
+section {
+  padding: 100px 0;
+}
+
+/* line 72, ../scss/_creative.scss */
+aside {
+  padding: 50px 0;
+}
+
+/* line 76, ../scss/_creative.scss */
+.no-padding {
+  padding: 0;
+}
+
+/*
+* Navigation
+*/
+/* line 84, ../scss/_creative.scss */
+.navbar-default {
+  -webkit-transition: all 0.35 ease;
+  -moz-transition: all 0.35 ease;
+  -ms-transition: all 0.35 ease;
+  -o-transition: all 0.35 ease;
+  transition: all 0.35 ease;
+  background-color: white;
+  border-color: transparent;
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+}
+/* line 89, ../scss/_creative.scss */
+.navbar-default.affix {
+  background-color: white;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+/* line 93, ../scss/_creative.scss */
+.navbar-default .navbar-header .navbar-brand {
+  color: #2ed8b1;
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+/* line 100, ../scss/_creative.scss */
+.navbar-default .navbar-header .navbar-brand:hover, .navbar-default .navbar-header .navbar-brand:focus {
+  color: #21b291;
+}
+/* line 104, ../scss/_creative.scss */
+.navbar-default .printpal-logo {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #2ed8b1;
+  padding: 0 8px;
+}
+/* line 108, ../scss/_creative.scss */
+.navbar-default .printpal-logo i {
+  color: white;
+  font-weight: 100 !important;
+  margin-left: -20px;
+}
+/* line 117, ../scss/_creative.scss */
+.navbar-default .nav > li > a,
+.navbar-default .nav > li > a:focus {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 17px;
+  color: #1e1f1f;
+}
+/* line 122, ../scss/_creative.scss */
+.navbar-default .nav > li > a:hover,
+.navbar-default .nav > li > a:focus:hover {
+  color: white;
+}
+/* line 128, ../scss/_creative.scss */
+.navbar-default .nav > li.active > a,
+.navbar-default .nav > li.active > a:focus {
+  color: #1e1f1f !important;
+  background-color: transparent;
+}
+/* line 131, ../scss/_creative.scss */
+.navbar-default .nav > li.active > a:hover,
+.navbar-default .nav > li.active > a:focus:hover {
+  background-color: transparent;
+}
+@media (min-width: 768px) {
+  /* line 84, ../scss/_creative.scss */
+  .navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+  }
+  /* line 141, ../scss/_creative.scss */
+  .navbar-default .navbar-header .navbar-brand {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  /* line 144, ../scss/_creative.scss */
+  .navbar-default .navbar-header .navbar-brand:hover, .navbar-default .navbar-header .navbar-brand:focus {
+    color: white;
+  }
+  /* line 149, ../scss/_creative.scss */
+  .navbar-default .nav > li > a,
+  .navbar-default .nav > li > a:focus {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  /* line 151, ../scss/_creative.scss */
+  .navbar-default .nav > li > a:hover,
+  .navbar-default .nav > li > a:focus:hover {
+    color: white;
+  }
+  /* line 155, ../scss/_creative.scss */
+  .navbar-default.affix {
+    background-color: white;
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+  /* line 158, ../scss/_creative.scss */
+  .navbar-default.affix .navbar-header .navbar-brand {
+    color: #2ed8b1;
+    font-size: 20px;
+  }
+  /* line 162, ../scss/_creative.scss */
+  .navbar-default.affix .navbar-header .navbar-brand:hover, .navbar-default.affix .navbar-header .navbar-brand:focus {
+    color: #21b291;
+  }
+  /* line 167, ../scss/_creative.scss */
+  .navbar-default.affix .nav > li > a,
+  .navbar-default.affix .nav > li > a:focus {
+    color: #222222;
+  }
+  /* line 169, ../scss/_creative.scss */
+  .navbar-default.affix .nav > li > a:hover,
+  .navbar-default.affix .nav > li > a:focus:hover {
+    color: #2ed8b1;
+  }
+  /* line 173, ../scss/_creative.scss */
+  .navbar-default.affix .printpal-logo {
+    padding: 5px 8px 2px 8px;
+  }
+}
+
+/*
+* Home Page Header
+*/
+/* line 184, ../scss/_creative.scss */
+.printpal-header {
+  background: url("../img/header3.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  min-height: auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  z-index: 1;
+}
+/* line 194, ../scss/_creative.scss */
+.printpal-header .header-content {
+  position: relative;
+  text-align: center;
+  padding: 100px 15px 100px;
+  width: 100%;
+}
+/* line 200, ../scss/_creative.scss */
+.printpal-header .header-content .header-content-inner h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* line 206, ../scss/_creative.scss */
+.printpal-header .header-content .header-content-inner hr {
+  margin: 30px auto;
+}
+/* line 209, ../scss/_creative.scss */
+.printpal-header .header-content .header-content-inner p {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 28px;
+  font-style: italic;
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  /* line 184, ../scss/_creative.scss */
+  .printpal-header {
+    min-height: 100%;
+  }
+  /* line 220, ../scss/_creative.scss */
+  .printpal-header .header-content {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 0 50px;
+  }
+  /* line 227, ../scss/_creative.scss */
+  .printpal-header .header-content .header-content-inner {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 231, ../scss/_creative.scss */
+  .printpal-header .header-content .header-content-inner p {
+    font-size: 28px;
+    font-style: italic;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*
+* Sections
+*/
+/* line 247, ../scss/_creative.scss */
+.section-heading {
+  font-size: 35px;
+  margin-top: 0;
+}
+
+/* line 252, ../scss/_creative.scss */
+.service-box {
+  max-width: 400px;
+  margin: 50px auto 0;
+}
+@media (min-width: 992px) {
+  /* line 252, ../scss/_creative.scss */
+  .service-box {
+    margin: 20px auto 0;
+  }
+}
+/* line 258, ../scss/_creative.scss */
+.service-box p {
+  margin-bottom: 0;
+}
+/* line 261, ../scss/_creative.scss */
+.service-box h3 {
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+/* line 267, ../scss/_creative.scss */
+.portfolio-box {
+  position: relative;
+  display: block;
+  max-width: 650px;
+  margin: 0 auto;
+}
+/* line 272, ../scss/_creative.scss */
+.portfolio-box .portfolio-box-caption {
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
+  -ms-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  background: #2ed8b1;
+  background: rgba(46, 216, 177, 0.9);
+  color: white;
+  opacity: 0;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+/* line 283, ../scss/_creative.scss */
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* line 290, ../scss/_creative.scss */
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  padding: 0 15px;
+}
+/* line 294, ../scss/_creative.scss */
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+}
+/* line 299, ../scss/_creative.scss */
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+  font-size: 18px;
+}
+/* line 305, ../scss/_creative.scss */
+.portfolio-box:hover .portfolio-box-caption {
+  opacity: 1;
+}
+@media (min-width: 768px) {
+  /* line 312, ../scss/_creative.scss */
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    font-size: 16px;
+  }
+  /* line 315, ../scss/_creative.scss */
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-size: 22px;
+  }
+}
+
+/* line 324, ../scss/_creative.scss */
+.call-to-action h2 {
+  margin: 0 auto 20px;
+}
+
+/***********************/
+/* line 331, ../scss/_creative.scss */
+.btn-default {
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
+  -ms-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  color: #222222;
+  background-color: white;
+  border-color: white !important;
+}
+/* line 116, ../scss/_mixins.scss */
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active,
+.btn-default .open > .dropdown-toggle {
+  color: #222222;
+  background-color: #fcfcfc;
+  border-color: #ededed;
+}
+/* line 123, ../scss/_mixins.scss */
+.btn-default:active, .btn-default.active,
+.btn-default .open > .dropdown-toggle {
+  background-image: none;
+}
+/* line 133, ../scss/_mixins.scss */
+.btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled.focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled].focus, .btn-default[disabled]:active, .btn-default[disabled].active,
+.btn-default fieldset[disabled]:hover,
+.btn-default fieldset[disabled]:focus,
+.btn-default fieldset[disabled].focus,
+.btn-default fieldset[disabled]:active,
+.btn-default fieldset[disabled].active {
+  background-color: white;
+  border-color: white;
+}
+/* line 138, ../scss/_mixins.scss */
+.btn-default .badge {
+  color: white;
+  background-color: #222222;
+}
+
+/* line 335, ../scss/_creative.scss */
+.btn-primary {
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
+  -ms-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  color: white;
+  background-color: #2ed8b1;
+  border-color: #2ed8b1 !important;
+}
+/* line 116, ../scss/_mixins.scss */
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active,
+.btn-primary .open > .dropdown-toggle {
+  color: white;
+  background-color: #2ad7af;
+  border-color: #24bf9b;
+}
+/* line 123, ../scss/_mixins.scss */
+.btn-primary:active, .btn-primary.active,
+.btn-primary .open > .dropdown-toggle {
+  background-image: none;
+}
+/* line 133, ../scss/_mixins.scss */
+.btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled].active,
+.btn-primary fieldset[disabled]:hover,
+.btn-primary fieldset[disabled]:focus,
+.btn-primary fieldset[disabled].focus,
+.btn-primary fieldset[disabled]:active,
+.btn-primary fieldset[disabled].active {
+  background-color: #2ed8b1;
+  border-color: #2ed8b1;
+}
+/* line 138, ../scss/_mixins.scss */
+.btn-primary .badge {
+  color: #2ed8b1;
+  background-color: white;
+}
+
+/* line 339, ../scss/_creative.scss */
+.btn {
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  border: none;
+  border-radius: 300px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* line 347, ../scss/_creative.scss */
+.btn-xl {
+  padding: 15px 30px;
+}
+
+/* line 351, ../scss/_creative.scss */
+.button-outlined {
+  background-color: transparent !important;
+  border-width: 2px !important;
+  border-style: solid;
+  width: 150px;
+}
+
+/* line 360, ../scss/_creative.scss */
+::-moz-selection {
+  color: white;
+  text-shadow: none;
+  background: #222222;
+}
+
+/* line 366, ../scss/_creative.scss */
+::selection {
+  color: white;
+  text-shadow: none;
+  background: #222222;
+}
+
+/* line 372, ../scss/_creative.scss */
+img::selection {
+  color: white;
+  background: transparent;
+}
+
+/* line 377, ../scss/_creative.scss */
+img::-moz-selection {
+  color: white;
+  background: transparent;
+}
+
+/* line 382, ../scss/_creative.scss */
+body {
+  webkit-tap-highlight-color: #222222;
+}
+
+/* line 387, ../scss/_creative.scss */
+.text-primary {
+  color: #2ed8b1;
+}
+
+/* line 391, ../scss/_creative.scss */
+.no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* line 396, ../scss/_creative.scss */
+.tooltip {
+  z-index: 1000;
+}
+
+/*ADDED BY ARUNIW*/
+/*ICON FONTS CSS*/
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/Flaticon.eot");
+  src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"), url("../fonts/Flaticon.woff") format("woff"), url("../fonts/Flaticon.ttf") format("truetype"), url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+}
+}
+/* line 24, ../scss/_flaticon.scss */
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+  font-family: Flaticon;
+  font-size: 20px;
+  font-style: normal;
+  margin-left: 20px;
+}
+
+/* line 31, ../scss/_flaticon.scss */
+.flaticon-pp-camera:before {
+  content: "\f100";
+}
+
+/* line 32, ../scss/_flaticon.scss */
+.flaticon-pp-commerce:before {
+  content: "\f101";
+}
+
+/* line 33, ../scss/_flaticon.scss */
+.flaticon-pp-delete:before {
+  content: "\f102";
+}
+
+/* line 34, ../scss/_flaticon.scss */
+.flaticon-pp-disable:before {
+  content: "\f103";
+}
+
+/* line 35, ../scss/_flaticon.scss */
+.flaticon-pp-document:before {
+  content: "\f104";
+}
+
+/* line 36, ../scss/_flaticon.scss */
+.flaticon-pp-email:before {
+  content: "\f105";
+}
+
+/* line 37, ../scss/_flaticon.scss */
+.flaticon-pp-image-upload2:before {
+  content: "\f106";
+}
+
+/* line 38, ../scss/_flaticon.scss */
+.flaticon-pp-info:before {
+  content: "\f107";
+}
+
+/* line 39, ../scss/_flaticon.scss */
+.flaticon-pp-payment:before {
+  content: "\f108";
+}
+
+/* line 40, ../scss/_flaticon.scss */
+.flaticon-pp-send:before {
+  content: "\f109";
+}
+
+/* line 41, ../scss/_flaticon.scss */
+.flaticon-pp-settings:before {
+  content: "\f10a";
+}
+
+/* line 42, ../scss/_flaticon.scss */
+.flaticon-pp-telephone:before {
+  content: "\f10b";
+}
+
+/* line 43, ../scss/_flaticon.scss */
+.flaticon-pp-upload:before {
+  content: "\f10c";
+}
+
+/* line 44, ../scss/_flaticon.scss */
+.flaticon-pp-upload1:before {
+  content: "\f10d";
+}
+
+/* line 45, ../scss/_flaticon.scss */
+.flaticon-technology:before {
+  content: "\f10e";
+}
+
+/*ADDED BY ARUNIW*/
+/*IMAGE UPLOAD PAGE CSS*/
+/*ADDED BY ARUNIW*/
+/*VARIABLES - Colors, Fonts*/
+/*Colors-Moutains Theme*/
+/*Colors-Nature Theme*/
+/*Fonts*/
+/*ADDED BY ARUNIW*/
+/*SASS MIXINS*/
+/*COMMON*/
+/* line 9, ../scss/_imageUpload.scss */
+select {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #dadada;
+  background-color: #ffffff;
+  color: #1e1f1f;
+  display: inline-block;
+  padding: 6px 20px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+/* line 23, ../scss/_imageUpload.scss */
+select:disabled {
+  cursor: not-allowed;
+}
+
+/* line 28, ../scss/_imageUpload.scss */
+.image-upload-container {
+  padding: 65px 15px;
+}
+
+/* line 32, ../scss/_imageUpload.scss */
+.tabs {
+  font-size: 1em;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+}
+/* line 37, ../scss/_imageUpload.scss */
+.tabs nav {
+  text-align: center;
+}
+/* line 39, ../scss/_imageUpload.scss */
+.tabs nav ul {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  list-style: none;
+}
+/* line 44, ../scss/_imageUpload.scss */
+.tabs nav ul li {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: block;
+  margin: 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+/* line 51, ../scss/_imageUpload.scss */
+.tabs nav ul li a {
+  color: #dadada;
+  display: block;
+  line-height: 2.5;
+  text-decoration: none !important;
+  text-overflow: ellipsis;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/* line 60, ../scss/_imageUpload.scss */
+.tabs nav ul li a.active {
+  color: #2ed8b1;
+}
+/* line 64, ../scss/_imageUpload.scss */
+.tabs nav ul li a:focus {
+  outline: none;
+}
+/* line 67, ../scss/_imageUpload.scss */
+.tabs nav ul li a span {
+  display: block;
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  margin: -35px auto;
+}
+
+/*TABS CIRCLES*/
+/* line 83, ../scss/_imageUpload.scss */
+.tabs-style-circle nav li a {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #dadada;
+  content: '';
+  top: 50%;
+  left: 50%;
+  margin: 0 -50px;
+  height: 120px;
+  opacity: 1;
+  width: 120px;
+  -webkit-transform: translate3d(0, -4px, 0);
+  transform: translate3d(0, -4px, 0);
+}
+/* line 96, ../scss/_imageUpload.scss */
+.tabs-style-circle nav li a.icon:before {
+  font-size: 42px !important;
+  margin-left: 0 !important;
+}
+/* line 101, ../scss/_imageUpload.scss */
+.tabs-style-circle nav li a.active {
+  border: 2px solid #2ed8b1;
+}
+/* line 105, ../scss/_imageUpload.scss */
+.tabs-style-circle nav li:after {
+  content: '';
+  width: 212px;
+  height: 2px;
+  background: #dadada;
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  z-index: -1;
+}
+/* line 116, ../scss/_imageUpload.scss */
+.tabs-style-circle nav li:last-child:after {
+  background: #f0f0f0 !important;
+}
+
+@media screen and (max-width: 58em) {
+  /* line 125, ../scss/_imageUpload.scss */
+  .tabs nav a.icon span {
+    display: none;
+  }
+
+  /* line 128, ../scss/_imageUpload.scss */
+  .tabs nav a:before {
+    margin-right: 0;
+  }
+
+  /* line 131, ../scss/_imageUpload.scss */
+  .tabs-style-circle nav li::before {
+    margin: -40px 0 0 -40px;
+    width: 80px;
+    height: 80px;
+  }
+}
+/*STEP WRAPPER*/
+/* line 139, ../scss/_imageUpload.scss */
+.pp-step-wrapper {
+  margin-bottom: 45px;
+  padding: 30px;
+}
+/* line 142, ../scss/_imageUpload.scss */
+.pp-step-wrapper .step-heading {
+  color: #1e1f1f;
+  font-family: "Merriweather", "Helvetica Neue", Arial, sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 35px;
+  text-align: center;
+}
+/* line 149, ../scss/_imageUpload.scss */
+.pp-step-wrapper .step-heading span {
+  font-weight: 300 !important;
+  opacity: 0.7;
+}
+/* line 153, ../scss/_imageUpload.scss */
+.pp-step-wrapper .step-heading p {
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px !important;
+  margin-top: 5px;
+  opacity: 0.5;
+}
+
+/*Image Uploader - Drag & Drop*/
+/* line 163, ../scss/_imageUpload.scss */
+.image-uploader {
+  text-align: center;
+}
+/* line 165, ../scss/_imageUpload.scss */
+.image-uploader .well {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  border: 2px dashed #dadada;
+  color: #f05f40;
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+}
+/* line 171, ../scss/_imageUpload.scss */
+.image-uploader .well b {
+  font-size: 24px;
+  font-weight: 700;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+/* line 177, ../scss/_imageUpload.scss */
+.image-uploader .well p {
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.7;
+}
+/* line 184, ../scss/_imageUpload.scss */
+.image-uploader .upload-icon:before {
+  color: #f05f40;
+  font-size: 100px;
+  margin-left: 0 !important;
+}
+/* line 190, ../scss/_imageUpload.scss */
+.image-uploader .browse-button {
+  background: #f05f40;
+  background: rgba(240, 95, 64, 0.8);
+  color: #ffffff;
+  cursor: pointer;
+  letter-spacing: 1px;
+  padding: 12px;
+  margin: 5px auto;
+  width: 170px;
+}
+
+/* line 201, ../scss/_imageUpload.scss */
+.uploaded-count {
+  background-color: #f0f0f0;
+  display: inline-block;
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+  left: 50%;
+  margin-left: -85px;
+  padding: 0 10px;
+  position: absolute;
+  text-align: center;
+  z-index: 10;
+}
+
+/* line 214, ../scss/_imageUpload.scss */
+.global-config-wrapper {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  background-color: white;
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  margin: -40px 12px;
+  padding: 20px;
+}
+/* line 220, ../scss/_imageUpload.scss */
+.global-config-wrapper h1 {
+  border-bottom: 1px solid #dadada;
+  color: #1e1f1f;
+  font-size: 30px;
+  font-weight: 300;
+  padding-bottom: 15px;
+  opacity: 0.8;
+}
+/* line 229, ../scss/_imageUpload.scss */
+.global-config-wrapper .settings-icon:before {
+  font-size: 27px;
+  margin-left: 0 !important;
+}
+/* line 234, ../scss/_imageUpload.scss */
+.global-config-wrapper .queue-progressbar {
+  margin-top: 15px;
+}
+/* line 238, ../scss/_imageUpload.scss */
+.global-config-wrapper .size-container label {
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+}
+/* line 244, ../scss/_imageUpload.scss */
+.global-config-wrapper .options-btn-container .btn-s {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 250, ../scss/_imageUpload.scss */
+.price-table-container {
+  margin-top: 15px;
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+}
+/* line 253, ../scss/_imageUpload.scss */
+.price-table-container table {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+/* line 256, ../scss/_imageUpload.scss */
+.price-table-container table tr {
+  display: table-row;
+}
+/* line 258, ../scss/_imageUpload.scss */
+.price-table-container table tr th, .price-table-container table tr td {
+  padding: 8px;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+  min-width: 110px;
+  max-width: 160px;
+}
+/* line 265, ../scss/_imageUpload.scss */
+.price-table-container table tr th:first-child, .price-table-container table tr td:first-child {
+  text-align: left !important;
+}
+/* line 269, ../scss/_imageUpload.scss */
+.price-table-container table tr:last-child {
+  background: #2ed8b1;
+  background: rgba(46, 216, 177, 0.8);
+  color: white;
+  background-color: #2ed8b1 !important;
+  font-weight: 900;
+}
+/* line 274, ../scss/_imageUpload.scss */
+.price-table-container table tr:last-child td {
+  text-align: center !important;
+}
+/* line 279, ../scss/_imageUpload.scss */
+.price-table-container table tr td h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* line 286, ../scss/_imageUpload.scss */
+.price-table-container table tbody {
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 200px;
+  width: 100%;
+}
+/* line 292, ../scss/_imageUpload.scss */
+.price-table-container table tbody tr:nth-child(even) {
+  background-color: #d1d7e0;
+}
+/* line 297, ../scss/_imageUpload.scss */
+.price-table-container .overflow-container {
+  max-height: 250px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/*UPLOADED IMAGES CONTAINER*/
+/* line 306, ../scss/_imageUpload.scss */
+.uploaded-images-container {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  border: 2px solid #2ed8b1;
+  margin: 8px 0 40px 0;
+  padding: 20px 8px;
+}
+/* line 311, ../scss/_imageUpload.scss */
+.uploaded-images-container .uploaded-image-wrapper {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.65);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.65);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background: #f9f9f9;
+  background: rgba(249, 249, 249, 0.9);
+  padding: 12px;
+  margin: 10px;
+  max-width: 230px;
+}
+/* line 319, ../scss/_imageUpload.scss */
+.uploaded-images-container .uploaded-image-wrapper .uploaded-image canvas {
+  display: block;
+  margin: 0 auto;
+}
+/* line 324, ../scss/_imageUpload.scss */
+.uploaded-images-container .uploaded-image-wrapper h4 {
+  font-weight: 700;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  margin: 5px 0!important;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/* line 332, ../scss/_imageUpload.scss */
+.uploaded-images-container .uploaded-image-wrapper span {
+  font-family: "Merriweather", "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+}
+/* line 336, ../scss/_imageUpload.scss */
+.uploaded-images-container .uploaded-image-wrapper label {
+  color: #1e1f1f;
+}
+/* line 339, ../scss/_imageUpload.scss */
+.uploaded-images-container .uploaded-image-wrapper label, .uploaded-images-container .uploaded-image-wrapper select {
+  clear: both;
+  margin: 20px 0 -5px;
+}
+/* line 343, ../scss/_imageUpload.scss */
+.uploaded-images-container .uploaded-image-wrapper .copies-input {
+  margin: 15px 0;
+}
+/* line 346, ../scss/_imageUpload.scss */
+.uploaded-images-container .uploaded-image-wrapper .alert {
+  font-family: "Merriweather", "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  padding: 5px;
+}
+/* line 350, ../scss/_imageUpload.scss */
+.uploaded-images-container .uploaded-image-wrapper .alert i {
+  margin-right: 5px;
+}
+/* line 354, ../scss/_imageUpload.scss */
+.uploaded-images-container .uploaded-image-wrapper .delete-uploaded-image {
+  background-color: transparent !important;
+}
+/* line 356, ../scss/_imageUpload.scss */
+.uploaded-images-container .uploaded-image-wrapper .delete-uploaded-image span {
+  color: #d9534f;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px;
+}
+/* line 362, ../scss/_imageUpload.scss */
+.uploaded-images-container .uploaded-image-wrapper .delete-uploaded-image span:before {
+  font-size: 23px;
+  margin-left: 0!important;
+}
+/* line 367, ../scss/_imageUpload.scss */
+.uploaded-images-container .uploaded-image-wrapper .delete-uploaded-image .copies-input {
+  margin: 10px 0;
+}
+
+/* line 373, ../scss/_imageUpload.scss */
+.pp-info-container {
+  margin-bottom: 70px;
+}
+/* line 375, ../scss/_imageUpload.scss */
+.pp-info-container textarea {
+  resize: vertical;
+}
+
+/* line 380, ../scss/_imageUpload.scss */
+.address-config {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  color: #ffffff;
+  cursor: pointer;
+  height: 27px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  margin-right: 145px;
+  width: 27px;
+}
+/* line 391, ../scss/_imageUpload.scss */
+.address-config.remove-field {
+  background-color: #d9534f;
+}
+/* line 394, ../scss/_imageUpload.scss */
+.address-config.add-field {
+  background-color: #2ed8b1;
+  margin-top: 30px;
+}
+/* line 398, ../scss/_imageUpload.scss */
+.address-config i {
+  padding: 5.5px;
+}
+
+/* line 402, ../scss/_imageUpload.scss */
+.errorRed {
+  color: #d9534f;
+}
+
+/*ADDED BY ARUNIW*/
+/*FILE UPLOAD PAGE CSS*/
+/*ADDED BY ARUNIW*/
+/*VARIABLES - Colors, Fonts*/
+/*Colors-Moutains Theme*/
+/*Colors-Nature Theme*/
+/*Fonts*/
+/*ADDED BY ARUNIW*/
+/*SASS MIXINS*/
+/* line 11, ../scss/_fileUpload.scss */
+.file-upload-container .upload-icon:before {
+  color: #4045f0 !important;
+}
+/* line 16, ../scss/_fileUpload.scss */
+.file-upload-container .well b, .file-upload-container .well p {
+  color: #4045f0;
+}
+/* line 20, ../scss/_fileUpload.scss */
+.file-upload-container .browse-button {
+  background-color: #4045f0;
+}

@@ -1,0 +1,23 @@
+/*ADDED BY ARUNIW*/
+
+/*FILE UPLOAD PAGE CSS*/
+
+@import "_variables";
+@import "_mixins";
+
+
+.file-upload-container{
+  .upload-icon{
+    &:before{
+      color: $pp-theme-dark-blue !important;
+    }
+  }
+  .well{
+    b,p{
+      color:$pp-theme-dark-blue;
+    }
+  }
+  .browse-button{
+    background-color: $pp-theme-dark-blue;
+  }
+}

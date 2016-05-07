@@ -1,43 +1,49 @@
-@import "variables.less";
-@import "mixins.less";
+/*ADDED BY ARUNIW*/
 
-// Global Components
+/*HOME PAGE CSS*/
+
+@import "_variables";
+@import "_mixins";
+
+/*
+* Global Components
+*/
 html,
 body {
+    background-color: #f0f0f0;
     height: 100%;
     width: 100%;
 }
 
 body {
-    .serif-font;
+   font-family: $serif-font;
 }
 
 hr {
-    border-color: @theme-primary;
     border-width: 3px;
+    border-color: $pp-theme-green;
     max-width: 50px;
 }
 
 hr.light {
-    border-color: white;
+    border-color: $pp-theme-white;
 }
-
-a {
-    .transition-all;
-    color: @theme-primary;
-    &:hover,
-    &:focus {
-        color: darken(@theme-primary, 10%);
-    }
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    .sans-serif-font;
+    font-family: $sans-serif-font;
+}
+
+a {
+    @include transition(all, 0.35s, ease);
+    color: $pp-theme-green;
+    &:hover,
+    &:focus {
+        color: darken($pp-theme-green, 10%);
+    }
 }
 
 p {
@@ -47,16 +53,16 @@ p {
 }
 
 .bg-primary {
-    background-color: @theme-primary;
+    background-color: $pp-theme-green;
 }
 
 .bg-dark {
-    background-color: @theme-dark;
-    color: white;
+    background-color: $theme-dark;
+    color: $pp-theme-white;
 }
 
 .text-faded {
-    color: fade(white, 70%);
+    color:rgba(255,255,255,0.7);
 }
 
 section {
@@ -71,21 +77,38 @@ aside {
     padding: 0;
 }
 
-// Navigation
+/*
+* Navigation
+*/
 
 .navbar-default {
-    background-color: white;
-    border-color: fade(@theme-dark, 5%);
-    .sans-serif-font;
-    .transition-all;
+    @include transition(all, 0.35, ease);
+    background-color: $pp-theme-white;
+    border-color: transparent;
+    font-family: $sans-serif-font;
+    &.affix {
+        background-color: white;
+        border-color: rgba(0, 0, 0, 0.1)!important;
+    }
     .navbar-header .navbar-brand {
-        color: @theme-primary;
-        .sans-serif-font;
-        font-weight: 700;
+        color: $pp-theme-green;
+        font-family: $sans-serif-font;
+        font-size: 25px;
+        font-weight: 900;
         text-transform: uppercase;
         &:hover,
         &:focus {
-            color: darken(@theme-primary, 10%);
+            color: darken($pp-theme-green, 10%);
+        }
+    }
+    .printpal-logo{
+        @include border-radius(5px);
+        background-color: $pp-theme-green;
+        padding: 0 8px;
+        i{
+            color: $pp-theme-white;
+            font-weight: 100 !important;
+            margin-left: -20px;
         }
     }
     .nav {
@@ -93,17 +116,17 @@ aside {
             > a,
             > a:focus {
                 text-transform: uppercase;
-                font-weight: 700;
-                font-size: 13px;
-                color: @theme-dark;
+                font-weight: 900;
+                font-size: 17px;
+                color: $pp-theme-grey;
                 &:hover {
-                    color: @theme-primary;
+                    color: $pp-theme-white;
                 }
             }
             &.active {
                 > a,
                 > a:focus {
-                    color: @theme-primary !important;
+                    color: $pp-theme-grey !important;
                     background-color: transparent;
                     &:hover {
                         background-color: transparent;
@@ -114,54 +137,60 @@ aside {
     }
     @media (min-width: 768px) {
         background-color: transparent;
-        border-color: fade(white, 30%);
+        border-color: transparent;
         .navbar-header .navbar-brand {
-            color: fade(white, 70%);
+            color: rgba(255,255,255,0.7);
             &:hover,
             &:focus {
-                color: white;
+                color: $pp-theme-white;
             }
         }
         .nav > li > a,
         .nav > li > a:focus {
-            color: fade(white, 70%);
+            color: rgba(255,255,255,0.7);
             &:hover {
-                color: white;
+                color: $pp-theme-white;
             }
         }
         &.affix {
             background-color: white;
-            border-color: fade(@theme-dark, 5%);
+            border-color: rgba(0,0,0,0.1);
             .navbar-header .navbar-brand {
-                color: @theme-primary;
-                font-size: 14px;
+                color: $pp-theme-green;
+                font-size: 20px;
                 &:hover,
                 &:focus {
-                    color: darken(@theme-primary, 10%);
+                    color: darken($pp-theme-green, 10%);
                 }
             }
             .nav > li > a,
             .nav > li > a:focus {
-                color: @theme-dark;
+                color: $theme-dark;
                 &:hover {
-                    color: @theme-primary;
+                    color: $pp-theme-green;
                 }
+            }
+            .printpal-logo{
+                padding: 5px 8px 2px 8px;
             }
         }
     }
 }
 
-// Homepage Header
+/*
+* Home Page Header
+*/
 
-header {
-    position: relative;
-    width: 100%;
+.printpal-header{
+    @include cover-background('../img/header3.jpg');
+    color: $pp-theme-white;
     min-height: auto;
-    .background-cover;
-    background-position: center;
-    background-image: url('../img/header.jpg');
     text-align: center;
-    color: white;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+
     .header-content {
         position: relative;
         text-align: center;
@@ -179,8 +208,9 @@ header {
             }
             p {
                 font-weight: 300;
-                color: fade(white, 70%);
-                font-size: 16px;
+                color: rgba(255,255,255,0.7);
+                font-size: 28px;
+                font-style: italic;
                 margin-bottom: 50px;
             }
         }
@@ -199,7 +229,8 @@ header {
                 margin-left: auto;
                 margin-right: auto;
                 p {
-                    font-size: 18px;
+                    font-size: 28px;
+                    font-style: italic;
                     max-width: 80%;
                     margin-left: auto;
                     margin-right: auto;
@@ -209,9 +240,12 @@ header {
     }
 }
 
-// Sections
+/*
+* Sections
+*/
 
 .section-heading {
+    font-size: 35px;
     margin-top: 0;
 }
 
@@ -224,6 +258,10 @@ header {
     p {
         margin-bottom: 0;
     }
+    h3{
+        font-size: 20px;
+        padding: 10px 0;
+    }
 }
 
 .portfolio-box {
@@ -232,16 +270,16 @@ header {
     max-width: 650px;
     margin: 0 auto;
     .portfolio-box-caption {
-        color: white;
+        @include transition(all, 0.35s, ease);
+        @include background-opacity(rgb(46,216,177),0.9);
+        color: $pp-theme-white;
         opacity: 0;
         display: block;
-        background: fade(@theme-primary, 90%);
         position: absolute;
         bottom: 0;
         text-align: center;
         width: 100%;
         height: 100%;
-        .transition-all;
         .portfolio-box-caption-content {
             width: 100%;
             text-align: center;
@@ -250,7 +288,7 @@ header {
             transform: translateY(-50%);
             .project-category,
             .project-name {
-                .sans-serif-font;
+                font-family: $sans-serif-font;
                 padding: 0 15px;
             }
             .project-category {
@@ -288,27 +326,18 @@ header {
     }
 }
 
-// Bootstrap Overrides
-.text-primary {
-    color: @theme-primary;
-}
-
-.no-gutter > [class*='col-'] {
-    padding-right:0;
-    padding-left:0;
-}
-
+/***********************/
 // Button Styles
 .btn-default {
-    .button-variant(@theme-dark;white;white);
+    @include button-variant($theme-dark,$pp-theme-white,$pp-theme-white);
 }
 
 .btn-primary {
-    .button-variant(white;@theme-primary;@theme-primary);
+    @include button-variant($pp-theme-white,$pp-theme-green,$pp-theme-green);
 }
 
 .btn {
-    .sans-serif-font;
+    font-family: $sans-serif-font;
     border: none;
     border-radius: 300px;
     font-weight: 700;
@@ -319,30 +348,51 @@ header {
     padding: 15px 30px;
 }
 
+.button-outlined{
+    background-color: transparent !important;
+    border-width: 2px !important;
+    border-style: solid;
+    width: 150px;
+}
+
 // Extras
 // -- Highlight Color Customization
 ::-moz-selection {
-    color: white;
+    color: $pp-theme-white;
     text-shadow: none;
-    background: @theme-dark;
+    background: $theme-dark;
 }
 
 ::selection {
-    color: white;
+    color: $pp-theme-white;
     text-shadow: none;
-    background: @theme-dark;
+    background: $theme-dark;
 }
 
 img::selection {
-    color: white;
+    color: $pp-theme-white;
     background: transparent;
 }
 
 img::-moz-selection {
-    color: white;
+    color: $pp-theme-white;
     background: transparent;
 }
 
 body {
-    webkit-tap-highlight-color: @theme-dark;
+    webkit-tap-highlight-color: $theme-dark;
+}
+
+// Bootstrap Overrides
+.text-primary {
+    color: $pp-theme-green;
+}
+
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+.tooltip{
+    z-index: 1000;
 }

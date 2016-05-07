@@ -1,66 +1,99 @@
-<div class="container">
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top printpal-nav affix">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="#main"><span class="printpal-logo"><i class="flaticon-technology"></i></span>printpal</a>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</nav>
 
+<div class="container image-upload-container animated fadeIn">
     <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div div id="status-buttons" class="text-center tabs tabs-style-circle">
+                <nav>
+                    <ul>
+                        <li><a class="icon flaticon-pp-upload1 tab-current animated pulse" ui-sref-active="active" ui-sref=".upload"><span>Select</span></a></li>
+                        <li><a class="icon flaticon-pp-info animated pulse" ui-sref-active="active" ui-sref=".details"><span>Info</span></a></li>
+                        <li><a class="icon flaticon-pp-payment animated pulse" ui-sref-active="active" ui-sref=".verification"><span>Payment</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="form-views" class="col-lg-12 col-md-12 col-sm-12 pp-info-container" ui-view></div>
+        </div>
 
-        <div class="col-lg-3 col-md-3">
-
-            <h3>Price Details</h3>
-            <table>
-                <tr>
-                    <th width="40px">name</th>
-                    <th width="20%">count</th>
-                    <th width="20%">size</th>
-                    <th width="20%">total</th>
-                </tr>
-                <tr ng-repeat="item in totalBill">
-                    <td ><h4 style="width: 60px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{item.name}}</h4></td>
-                    <td>{{item.count}}</td>
-                    <td>{{item.size}}</td>
-                    <td>{{item.total}}</td>
-
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>{{returnTotalBill()}}</td>
-                </tr>
-            </table>
+        <!--GLOBAL  CONFIG-->
+        <div class="col-lg-5 col-md-5 global-config-wrapper animated slideInUp">
             <div>
-                <div>
-                    Queue progress:
+                <h1><i class="flaticon-pp-settings settings-icon"></i> Global Settings</h1>
+                <div class="queue-progressbar">
+                    <p>Queue Progress:</p>
                     <div class="progress" style="">
                         <div class="progress-bar" role="progressbar"
                              ng-style="{ 'width': uploader.progress + '%' }"></div>
                     </div>
                 </div>
-                <label>size</label> <select style="width: 60px;" ng-model="size" ng-options="f for f in sizes" ng-disabled="!uploader.getNotUploadedItems().length" ng-change="changeTheSelectors()"></select><br/>
-                <button style="border-radius: 0 !important; border-color: #000000; border-width: 1px;" type="button"
-                        class="btn btn-s" ng-click="uploader.uploadAll()"
-                        ng-disabled="!uploader.getNotUploadedItems().length">
-                    <span class="glyphicon glyphicon-upload" style="color: #5cb85c;"></span> all
-                </button>
-                <button style="border-radius: 0 !important; border-color: #000000; border-width: 1px;" type="button"
-                        class="btn btn-s" ng-click="uploader.cancelAll()" ng-disabled="!uploader.isUploading">
-                    <span class="glyphicon glyphicon-ban-circle" style="color: #f0ad4e;"></span> all
-                </button>
-                <button style="border-radius: 0 !important; border-color: #000000; border-width: 1px;" type="button"
-                        class="btn btn-s" ng-click="uploader.clearQueue()" ng-disabled="!uploader.queue.length">
-                    <span class="glyphicon glyphicon-trash" style="color: #d9534f;"></span> all
-                </button>
+
+                <div class="size-container pull-left">
+                    <label>Size:</label>
+                    <select class="pp-select" ng-model="size" ng-options="f for f in sizes" ng-disabled="!uploader.getNotUploadedItems().length" ng-change="changeTheSelectors()"></select><br/>
+                </div>
+
+                <div class="options-btn-container pull-right">
+                    <button type="button"
+                            class="btn btn-s" ng-click="uploader.uploadAll()" ng-disabled="!uploader.getNotUploadedItems().length" tooltip="Upload All">
+                        <span class="glyphicon glyphicon-upload" style="color: #5cb85c;"></span> upload
+                    </button>
+                    <button type="button"
+                            class="btn btn-s" ng-click="uploader.cancelAll()" ng-disabled="!uploader.isUploading" tooltip="Cancel All">
+                        <span class="glyphicon glyphicon-ban-circle" style="color: #f0ad4e;"></span> all
+                    </button>
+                    <button type="button"
+                            class="btn btn-s" ng-click="uploader.clearQueue()" ng-disabled="!uploader.queue.length" tooltip="Delete All">
+                        <span class="glyphicon glyphicon-trash" style="color: #d9534f;"></span> delete
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 global-config-wrapper animated slideInUp">
+            <h1><i class="flaticon-pp-commerce settings-icon"></i> Price Details</h1>
+            <div class="price-table-container">
+                <div class="price-table-boday">
+                    <table class="fixed_headers">
+                        <tr>
+                            <th width="40px">name</th>
+                            <th width="20%">count</th>
+                            <th width="20%">size</th>
+                            <th width="20%">total</th>
+                        </tr>
+                        <tr ng-repeat="item in totalBill">
+                            <td><h4 title="{{item.name}}">{{item.name}}</h4></td>
+                            <td>{{item.count}}</td>
+                            <td>{{item.size}}</td>
+                            <td>{{item.total}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>{{returnTotalBill()}}</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
 
         </div>
 
-        <div class="col-lg-9 col-md-9" style="margin-bottom: 40px">
-            <div id="status-buttons" class="text-center">
-                <a ui-sref-active="active" ui-sref=".upload" style="color: #000000;"><span style="color: #ffffff">1</span>Select</a>
-                <a ui-sref-active="active" ui-sref=".details" style="color: #000000;"><span style="color: #ffffff">2</span>Info</a>
-                <a ui-sref-active="active" ui-sref=".verification" style="color: #000000;"><span style="color: #ffffff">3</span>Payment</a>
-            </div>
-            <div id="form-views" class="col-lg-12 col-md-12 col-sm-12" ui-view></div>
-        </div>
-
-    </div>
+   </div>
 
 </div>
